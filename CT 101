@@ -1,0 +1,37 @@
+/a plogram to calculate to calculate the fine for overdue libraly books
+#include <stdio.h>
+int main(){
+    int book_id;
+    int due_date;
+    int return_date;
+    int days_overdue;
+    int fine_rate;
+    int fine_amount;
+// initialization of variables
+    printf("please enter your book id");
+    scanf("%d",&book_id);
+    
+    printf("please enter due_date");
+    scanf("%d",&due_date);
+    
+    printf("please enter the return date");
+    scanf("%d",&return_date);
+    
+    days_overdue = return_date - due_date;
+    
+if (days_overdue <=7){
+  fine_rate = 20;
+}else if (days_overdue <=14){
+  fine_rate = 50;
+  }else if (days_overdue>=15){
+    fine_rate = 100;}
+    
+    printf("book_id, %d\n", book_id);
+    printf("due_date,%d\n",due_date);
+    printf("return_date,%d\n",return_date);
+    printf("days_overdue,%d\n",days_overdue);
+    printf("fine_rate,%d\n",fine_rate);
+    printf("fine_amount,%d\n",fine_amount);
+    
+return 0;    
+}
